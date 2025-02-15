@@ -1,0 +1,6 @@
+@Practice_Project_with_ASP.Net_Core_with_DDD_HostAddress = http://localhost:5120
+
+GET {{Practice_Project_with_ASP.Net_Core_with_DDD_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
