@@ -7,6 +7,7 @@
 		public DateTimeOffset ReleaseDate { get; private set; }
 		public double Rating { get; private set; }
 
+		// Private constructor for ORM frameworks
 		private Movie()
 		{
 			Title = string.Empty;
