@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace Practice_Project_with_ASP.Net_Core_with_DDD.Services
 {
-	public class MovieService : IMovieServices
+	public class MovieService : IMovieService
 	{
 		private readonly MovieDbContext _dbContext;
 		private readonly ILogger<MovieService> _logger;

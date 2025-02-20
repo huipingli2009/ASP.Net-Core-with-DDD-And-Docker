@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Practice_Project_with_ASP.Net_Core_with_DDD.EndPoints;
 using Practice_Project_with_ASP.Net_Core_with_DDD.Persistence;
+using Practice_Project_with_ASP.Net_Core_with_DDD.Services;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,8 @@ builder.Services.AddDbContext<MovieDbContext>(options =>
 	var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 	options.UseNpgsql(connectionString);
 });
+
+builder.Services.AddTransient<IMovieService, MovieService>();
 
 var app = builder.Build();
 
@@ -33,6 +37,8 @@ app.UseHttpsRedirection();
 
 app.MapGet("/", () => "Hello World!")
    .Produces(200, typeof(string));
+
+app.MapMovieEndpoints();
 
 app.Run();
 
