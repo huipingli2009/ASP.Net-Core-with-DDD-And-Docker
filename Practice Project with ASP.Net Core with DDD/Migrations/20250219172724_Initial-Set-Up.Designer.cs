@@ -12,8 +12,8 @@ using Practice_Project_with_ASP.Net_Core_with_DDD.Persistence;
 namespace Practice_Project_with_ASP.Net_Core_with_DDD.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20250217204834_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250219172724_Initial-Set-Up")]
+    partial class InitialSetUp
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

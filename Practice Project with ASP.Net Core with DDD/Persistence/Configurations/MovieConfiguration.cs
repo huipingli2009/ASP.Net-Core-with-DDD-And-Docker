@@ -33,9 +33,9 @@ namespace Practice_Project_with_ASP.Net_Core_with_DDD.Persistence.Configurations
 				.IsRequired()
 				.ValueGeneratedOnAdd();
 
-			builder.Property(x => x.LastModified)
-				.IsRequired()
-				.ValueGeneratedOnUpdate();
+			builder.Property(x => x.LastModified);
+				//.IsRequired()
+				//.ValueGeneratedOnAddOrUpdate();
 
 			//optional: configure indexes
 			builder.HasIndex(x => x.Title);
