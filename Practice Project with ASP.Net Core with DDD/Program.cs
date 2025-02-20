@@ -23,6 +23,12 @@ if (app.Environment.IsDevelopment())
 	app.MapScalarApiReference();
 }
 
+await using (var serviceScope = app.Services.CreateAsyncScope())
+await using (var dbContext = serviceScope.ServiceProvider.GetRequiredService<MovieDbContext>())
+{
+	await dbContext.Database.EnsureCreatedAsync();
+}
+
 app.UseHttpsRedirection();
 
 app.MapGet("/", () => "Hello World!")

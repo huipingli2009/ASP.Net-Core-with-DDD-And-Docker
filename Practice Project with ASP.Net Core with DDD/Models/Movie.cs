@@ -37,7 +37,7 @@
 			ReleaseDate = releaseDate;
 			Rating = rating;
 
-			UpdateLastModified();
+			//UpdateLastModified();
 		}
 
 		private static void ValidateInputs(string title, string genre, DateTimeOffset releaseDate, double rating)
