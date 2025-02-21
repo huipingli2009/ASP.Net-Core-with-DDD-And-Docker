@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Practice_Project_with_ASP.Net_Core_with_DDD.Services
 {
-	public interface IMovieServices
+	public interface IMovieService
 	{
 		Task<MovieDto> GetMovieByIdAsync(Guid id);
 		Task<IEnumerable> GetAllMoviesAsync();
